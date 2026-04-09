@@ -115,13 +115,14 @@ def handle_mandate(data):
 
     print(f"✅ REAL STATE → {real_state}")
 
-    save_mandate(data, real_state)
+    save_mandate(data, real_state, print("🔥 SAVING TO DB NOW"))
 
 
 def handle_installment(data):
     print(f"\n💸 Installment → {data.get('id')}")
 
-    save_installment(data)
+    save_installment(data, print("🔥 SAVING TO DB NOW"))
+   
 
 
 # ================= WEBHOOKS =================
