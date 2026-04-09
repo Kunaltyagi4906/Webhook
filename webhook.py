@@ -114,14 +114,14 @@ def handle_mandate(data):
     real_state = full_data.get("state")
 
     print(f"✅ REAL STATE → {real_state}")
-
-    save_mandate(data, real_state, print("🔥 SAVING TO DB NOW"))
+    print("🔥 SAVING TO DB NOW")
+    save_mandate(data, real_state)
 
 
 def handle_installment(data):
     print(f"\n💸 Installment → {data.get('id')}")
-
-    save_installment(data, print("🔥 SAVING TO DB NOW"))
+    print("🔥 SAVING TO DB NOW")
+    save_installment(data)
    
 
 
