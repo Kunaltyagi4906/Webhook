@@ -45,4 +45,8 @@ class Installment(Base):
     full_payload = Column(JSON)
 
 
-Base.metadata.create_all(bind=engine)
+try:
+    Base.metadata.create_all(bind=engine)
+    print("✅ Tables created")
+except Exception as e:
+    print("❌ DB init error:", e)
