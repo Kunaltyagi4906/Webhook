@@ -107,7 +107,8 @@ def handle_mandate(data):
     full_data = fetch_mandate_details(mandate_id)
 
     if not full_data:
-        print("⚠️ No full data")
+        print("⚠️ No full data, saving basic webhook data")
+        save_mandate(data, real_state="UNKNOWN")
         return
 
     real_state = full_data.get("state")
